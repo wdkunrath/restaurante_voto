@@ -4,8 +4,8 @@ import { AuthGuard } from './helpers';
 
 import { HomeComponent } from './views/home';
 import { LoginComponent } from './views/login';
-
 import { RestaurantCrudComponent } from "./views/restaurant-crud/restaurant-crud.component";
+
 import { RestaurantCreateComponent } from '@components/restaurant/restaurant-create/restaurant-create.component';
 import { RestaurantUpdateComponent } from '@components/restaurant/restaurant-update/restaurant-update.component';
 import { RestaurantDeleteComponent } from '@components/restaurant/restaurant-delete/restaurant-delete.component';

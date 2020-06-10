@@ -29,6 +29,7 @@ import { LoginComponent } from './views/login';
 import { RestaurantCrudComponent } from './views/restaurant-crud/restaurant-crud.component';
 
 import { HeaderComponent } from '@components/template/header/header.component';
+import { NavComponent } from '@components/template/nav/nav.component';
 import { FooterComponent } from '@components/template/footer/footer.component';
 
 import { RestaurantCreateComponent } from '@components/restaurant/restaurant-create/restaurant-create.component';
@@ -44,6 +45,7 @@ registerLocaleData(localePt);
       HomeComponent,
       LoginComponent,
       HeaderComponent,
+      NavComponent,
       FooterComponent,
 
       RestaurantCrudComponent,

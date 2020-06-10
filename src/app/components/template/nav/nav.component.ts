@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../../../services/authentication.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -20,5 +21,9 @@ export class NavComponent implements OnInit {
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
+  }
+
+  isLoggedIn() {
+    return this.authenticationService.isLoggedIn();
   }
 }
