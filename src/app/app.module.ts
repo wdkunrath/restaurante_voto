@@ -24,9 +24,13 @@ import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
 import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './helpers';
-import { HomeComponent } from './views/home';
-import { LoginComponent } from './views/login';
-import { RestaurantCrudComponent } from './views/restaurant-crud/restaurant-crud.component';
+
+import { HomeComponent } from '@app/views/home';
+import { LoginComponent } from '@app/views/login';
+import { RestaurantCrudComponent } from '@app/views/restaurant-crud/restaurant-crud.component';
+import { UsuariosCrudComponent } from "@app/views/usuarios-crud/usuarios-crud.component";
+import { SemanasCrudComponent } from "@app/views/semanas-crud/semanas-crud.component";
+import { VotacaoCrudComponent } from '@app/views/votacao-crud/votacao-crud.component';
 
 import { HeaderComponent } from '@components/template/header/header.component';
 import { NavComponent } from '@components/template/nav/nav.component';
@@ -36,6 +40,20 @@ import { RestaurantCreateComponent } from '@components/restaurant/restaurant-cre
 import { RestaurantReadComponent } from '@components/restaurant/restaurant-read/restaurant-read.component';
 import { RestaurantUpdateComponent } from '@components/restaurant/restaurant-update/restaurant-update.component';
 import { RestaurantDeleteComponent } from '@components/restaurant/restaurant-delete/restaurant-delete.component';
+
+import { UsuariosCreateComponent } from '@components/usuarios/usuarios-create/usuarios-create.component';
+import { UsuariosUpdateComponent } from '@components/usuarios/usuarios-update/usuarios-update.component';
+import { UsuariosDeleteComponent } from '@components/usuarios/usuarios-delete/usuarios-delete.component';
+import { UsuariosReadComponent } from '@components/usuarios/usuarios-read/usuarios-read.component';
+
+import { SemanasCreateComponent } from '@components/semanas/semanas-create/semanas-create.component';
+import { SemanasReadComponent } from '@components/semanas/semanas-read/semanas-read.component';
+import { SemanasUpdateComponent } from '@components/semanas/semanas-update/semanas-update.component';
+import { SemanasDeleteComponent } from '@components/semanas/semanas-delete/semanas-delete.component';
+
+import { VotacaoReadComponent } from '@components/votacao/votacao-read/votacao-read.component';
+import { VotacaoCreateComponent } from '@components/votacao/votacao-create/votacao-create.component';
+import { VotacaoUpdateComponent } from '@components/votacao/votacao-update/votacao-update.component';
 
 registerLocaleData(localePt);
 
@@ -53,6 +71,24 @@ registerLocaleData(localePt);
       RestaurantReadComponent,
       RestaurantUpdateComponent,
       RestaurantDeleteComponent,
+
+      UsuariosCrudComponent,
+      UsuariosCreateComponent,
+      UsuariosReadComponent,
+      UsuariosUpdateComponent,
+      UsuariosDeleteComponent,
+
+      SemanasCrudComponent,
+      SemanasCreateComponent,
+      SemanasReadComponent,
+      SemanasUpdateComponent,
+      SemanasDeleteComponent,
+
+      VotacaoCrudComponent,
+      VotacaoReadComponent,
+      VotacaoCreateComponent,
+      VotacaoUpdateComponent,
+
 
       RedDirective,
       ForDirective,
