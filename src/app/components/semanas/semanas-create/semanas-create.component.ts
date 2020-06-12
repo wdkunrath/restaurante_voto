@@ -8,10 +8,14 @@ import { SemanaService } from '@app/services/semana.service';
   templateUrl: './semanas-create.component.html',
   styleUrls: ['./semanas-create.component.css']
 })
+
+
 export class SemanasCreateComponent implements OnInit {
 
   semanas: Semanas = {
-    name: ''
+    name: '',
+    dataInit: new Date,
+    dataEnd: new Date
   }
 
   constructor(private semanaService: SemanaService,

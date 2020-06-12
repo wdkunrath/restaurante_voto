@@ -4,14 +4,23 @@ import { HttpClient } from "@angular/common/http";
 import { Semanas } from "@app/models/semana.model";
 import { Observable, EMPTY } from "rxjs";
 import { map, catchError } from "rxjs/operators";
+import { Votacao } from '@app/models/votacao.model';
+import { VotacaoService } from '@app/services/votacao.service';
 
 @Injectable({
   providedIn: "root",
 })
+
 export class SemanaService {
   baseUrl = "http://localhost:3001/semana";
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient,
+    private votacaoService: VotacaoService) {}
+
+  votacao: Votacao;
+
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {
@@ -59,6 +68,18 @@ export class SemanaService {
       catchError((e) => this.errorHandler(e))
     );
   }
+
+  // validUsuario(){
+  //     this.votacaoService.read().subscribe(votacao => {
+  //       votacao.map((votos)=>{
+  //       if(votos.user == localStorage.getItem('currentUser')){
+  //         console.log('top')
+  //       }else{
+  //         return  false
+  //       }
+  //     })
+  //   })
+  // }
 
   errorHandler(e: any): Observable<any> {
     this.showMessage("Ocorreu um erro!", true);

@@ -4,7 +4,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { environment } from '@environments/environment';
 import { map, catchError } from "rxjs/operators";
 import { User } from '@app/models';
-import { Observable } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {

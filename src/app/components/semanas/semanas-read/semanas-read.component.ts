@@ -10,7 +10,7 @@ import { SemanaService } from '@app/services/semana.service';
 export class SemanasReadComponent implements OnInit {
 
   semanas: Semanas[]
-  displayedColumns = ['id', 'name', 'action']
+  displayedColumns = ['id', 'name','dataInit','dataEnd', 'action']
 
   constructor(private semanaService: SemanaService) { }
 

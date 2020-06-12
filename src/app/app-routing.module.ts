@@ -8,6 +8,7 @@ import { RestaurantCrudComponent } from "@app/views/restaurant-crud/restaurant-c
 import { SemanasCrudComponent } from "@app/views/semanas-crud/semanas-crud.component";
 import { UsuariosCrudComponent } from "@app/views/usuarios-crud/usuarios-crud.component";
 import { VotacaoCrudComponent } from "@app/views/votacao-crud/votacao-crud.component";
+import { ResultadoVotoCrudComponent } from '@app/views/resultado-voto/resultado-voto.component';
 
 import { RestaurantCreateComponent } from '@components/restaurant/restaurant-create/restaurant-create.component';
 import { RestaurantUpdateComponent } from '@components/restaurant/restaurant-update/restaurant-update.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path: "votacao",component: VotacaoCrudComponent, canActivate: [AuthGuard]},
   {path: "votacao/create",component: VotacaoCreateComponent, canActivate: [AuthGuard]},
   {path: "votacao/update/:id",component: VotacaoUpdateComponent, canActivate: [AuthGuard]},
+  {path: "resultado",component: ResultadoVotoCrudComponent, canActivate: [AuthGuard]},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

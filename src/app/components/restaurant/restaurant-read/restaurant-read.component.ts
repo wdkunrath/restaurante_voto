@@ -9,15 +9,15 @@ import { RestaurantService } from "@app/services/restaurant.service";
 })
 export class RestaurantReadComponent implements OnInit {
 
-  restaurant: Restaurant[]
-  displayedColumns = ['id', 'name', 'action']
-
   constructor(private restaurantService: RestaurantService) { }
+
+  restaurant: Restaurant[]
+
+  displayedColumns = ['id', 'name', 'action']
 
   ngOnInit(): void {
     this.restaurantService.read().subscribe(restaurant => {
       this.restaurant = restaurant
-    })
+    });
   }
-
 }

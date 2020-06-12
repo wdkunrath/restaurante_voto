@@ -31,10 +31,12 @@ import { RestaurantCrudComponent } from '@app/views/restaurant-crud/restaurant-c
 import { UsuariosCrudComponent } from "@app/views/usuarios-crud/usuarios-crud.component";
 import { SemanasCrudComponent } from "@app/views/semanas-crud/semanas-crud.component";
 import { VotacaoCrudComponent } from '@app/views/votacao-crud/votacao-crud.component';
+import { ResultadoVotoCrudComponent } from '@app/views/resultado-voto/resultado-voto.component';
 
 import { HeaderComponent } from '@components/template/header/header.component';
 import { NavComponent } from '@components/template/nav/nav.component';
 import { FooterComponent } from '@components/template/footer/footer.component';
+import { ResultadoReadComponent } from '@components/resultado/resultado-read/resultado-read.component';
 
 import { RestaurantCreateComponent } from '@components/restaurant/restaurant-create/restaurant-create.component';
 import { RestaurantReadComponent } from '@components/restaurant/restaurant-read/restaurant-read.component';
@@ -54,6 +56,7 @@ import { SemanasDeleteComponent } from '@components/semanas/semanas-delete/seman
 import { VotacaoReadComponent } from '@components/votacao/votacao-read/votacao-read.component';
 import { VotacaoCreateComponent } from '@components/votacao/votacao-create/votacao-create.component';
 import { VotacaoUpdateComponent } from '@components/votacao/votacao-update/votacao-update.component';
+
 
 registerLocaleData(localePt);
 
@@ -89,6 +92,8 @@ registerLocaleData(localePt);
       VotacaoCreateComponent,
       VotacaoUpdateComponent,
 
+      ResultadoVotoCrudComponent,
+      ResultadoReadComponent,
 
       RedDirective,
       ForDirective,

@@ -26,6 +26,7 @@ export class SemanasUpdateComponent implements OnInit {
 
   updateSemanas(): void {
     this.semanaService.update(this.semanas).subscribe(() => {
+      console.log(this.semanas)
       this.semanaService.showMessage("Semana atualizado com sucesso!");
       this.router.navigate(["/semanas"]);
     });

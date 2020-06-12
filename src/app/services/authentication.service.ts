@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { UserService } from '@app/services/user.service';
 import { environment } from '@environments/environment';
 import { User } from '@app/models';
 
@@ -10,8 +10,9 @@ import { User } from '@app/models';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
+    user: User
     isLoggedin: boolean = false;
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private userService: UserService) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
@@ -45,5 +46,25 @@ export class AuthenticationService {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
+    }
+
+    validUser(id:number){
+      this.userService.readById(id).subscribe((user) =>{
+        if(user !== null){
+          let logado = this.isLoggedIn();
+          if(logado){
+            let userlogado = JSON.parse(localStorage.getItem('currentUser'))
+            let userlogadoID = userlogado.map((user)=>{
+              return user.id;
+            });
+            
+            if(user.id === userlogadoID){
+              return true;
+            }
+          }
+        }else{
+          return false;
+        }
+      })
     }
 }
